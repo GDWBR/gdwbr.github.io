@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALL OF DUTY - JOGADORES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:wght@300;400;600;800&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jogadores.css">
+</head>
+<body>
+    <!-- Canvas para partículas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">CALL OF DUTY</a>
+        </div>
+        <div class="menu-icon">
+            <a href="index.html" class="btn outline btn-voltar">VOLTAR</a>
+        </div>
+    </header>
+
+    <!-- Seção Parallax Jogadores -->
+    <section class="jogadores-parallax">
+        <div class="parallax-layer parallax-barracks" id="layer-barracks"></div>
+        
+        <div class="container fade-in">
+            <h1 class="neon-title" data-text="CONHEÇA OS JOGADORES">CONHEÇA OS JOGADORES</h1>
+            
+            <div class="players-grid">
+                <!-- Player 1 -->
+                <div class="player-card fade-in">
+                    <div class="card-image-wrapper">
+                        <img src="assets/operator.png" alt="Capitão Price">
+                    </div>
+                    <div class="card-info">
+                        <h3>CAPITÃO PRICE</h3>
+                        <p class="role">Líder de Esquadrão</p>
+                        <p class="specialty">Assalto e Tática</p>
+                        <div class="stats">
+                            <span>Experiência</span>
+                            <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                        </div>
+                        <button class="btn primary btn-modal" data-player="price">VER PERFIL COMPLETO</button>
+                    </div>
+                </div>
+                
+                <!-- Player 2 -->
+                <div class="player-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="card-image-wrapper">
+                        <img src="assets/operator.png" alt="Ghost">
+                    </div>
+                    <div class="card-info">
+                        <h3>GHOST</h3>
+                        <p class="role">Tenente</p>
+                        <p class="specialty">Infiltração / Stealth</p>
+                        <div class="stats">
+                            <span>Experiência</span>
+                            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                        </div>
+                        <button class="btn primary btn-modal" data-player="ghost">VER PERFIL COMPLETO</button>
+                    </div>
+                </div>
+
+                <!-- Player 3 -->
+                <div class="player-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="card-image-wrapper">
+                        <img src="assets/operator.png" alt="Soap">
+                    </div>
+                    <div class="card-info">
+                        <h3>SOAP</h3>
+                        <p class="role">Sargento</p>
+                        <p class="specialty">Demolição / CQC</p>
+                        <div class="stats">
+                            <span>Experiência</span>
+                            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                        </div>
+                        <button class="btn primary btn-modal" data-player="soap">VER PERFIL COMPLETO</button>
+                    </div>
+                </div>
+
+                <!-- Player 4 -->
+                <div class="player-card fade-in" style="transition-delay: 0.3s;">
+                    <div class="card-image-wrapper">
+                        <img src="assets/operator.png" alt="Gaz">
+                    </div>
+                    <div class="card-info">
+                        <h3>GAZ</h3>
+                        <p class="role">Sargento</p>
+                        <p class="specialty">Esp. em Comunicação</p>
+                        <div class="stats">
+                            <span>Experiência</span>
+                            <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+                        </div>
+                        <button class="btn primary btn-modal" data-player="gaz">VER PERFIL COMPLETO</button>
+                    </div>
+                </div>
+
+                <!-- Player 5 -->
+                <div class="player-card fade-in" style="transition-delay: 0.4s;">
+                    <div class="card-image-wrapper">
+                        <img src="assets/operator.png" alt="Farah">
+                    </div>
+                    <div class="card-info">
+                        <h3>FARAH</h3>
+                        <p class="role">Comandante</p>
+                        <p class="specialty">Guerrilha / Sniper</p>
+                        <div class="stats">
+                            <span>Experiência</span>
+                            <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+                        </div>
+                        <button class="btn primary btn-modal" data-player="farah">VER PERFIL COMPLETO</button>
+                    </div>
+                </div>
+
+                <!-- Player 6 -->
+                <div class="player-card fade-in" style="transition-delay: 0.5s;">
+                    <div class="card-image-wrapper">
+                        <img src="assets/operator.png" alt="Alex">
+                    </div>
+                    <div class="card-info">
+                        <h3>ALEX</h3>
+                        <p class="role">Agente CIA</p>
+                        <p class="specialty">Reconhecimento</p>
+                        <div class="stats">
+                            <span>Experiência</span>
+                            <div class="progress-bar"><div class="progress" style="width: 86%;"></div></div>
+                        </div>
+                        <button class="btn primary btn-modal" data-player="alex">VER PERFIL COMPLETO</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body">
+                <!-- Conteúdo injetado via JS -->
+            </div>
+            <button class="btn secondary" style="width:100%; margin-top:20px;" id="modal-close-btn">FECHAR</button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">CALL OF DUTY</div>
+                <div class="footer-links" id="social">
+                    <a href="index.html">Início</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Twitch</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 COD Clã. Todos os direitos reservados. Operação autorizada.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="jogadores.js"></script>
+</body>
+</html>

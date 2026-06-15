@@ -1,0 +1,303 @@
+/* Jogadores Specific Styling */
+
+.btn-voltar {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.jogadores-parallax {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 120px; /* Header space */
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+
+.parallax-barracks {
+    background-image: url('assets/barracks_bg.png');
+    z-index: -1;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Fallback if JS parallax is active on this layer too */
+
+.neon-title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px var(--primary),
+        0 0 40px var(--primary),
+        0 0 80px var(--primary);
+    animation: pulsate 1.5s infinite alternate;
+}
+
+@keyframes pulsate {
+    100% {
+        text-shadow: 
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px var(--primary),
+        0 0 40px var(--primary),
+        0 0 80px var(--primary),
+        0 0 100px var(--primary);
+    }
+    0% {
+        text-shadow: 
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px var(--primary),
+        0 0 10px var(--primary),
+        0 0 45px var(--primary),
+        0 0 55px var(--primary);
+    }
+}
+
+/* Grid */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 900px) {
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .neon-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Player Card */
+.player-card {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(232, 93, 4, 0.3);
+    border-color: var(--primary);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.player-card:hover .card-image-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 25px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h3 {
+    font-family: var(--font-subheading);
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.card-info .role {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.card-info .specialty {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Progress Bar */
+.stats {
+    text-align: left;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.stats span {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    transition: width 1.5s ease-out;
+}
+
+.btn-modal {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background: #111;
+    border: 1px solid var(--primary);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(232, 93, 4, 0.2);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.modal-header p {
+    color: var(--primary);
+    font-family: var(--font-subheading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.modal-section {
+    margin-bottom: 20px;
+}
+
+.modal-section h4 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: var(--font-subheading);
+    letter-spacing: 1px;
+}
+
+.modal-section p, .modal-section ul {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.modal-section ul {
+    list-style-type: none;
+}
+
+.modal-section ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.modal-section ul li::before {
+    content: '▸';
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}

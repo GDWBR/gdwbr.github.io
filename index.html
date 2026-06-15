@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLÃ GDWBR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:wght@300;400;600;800&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas para partículas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="logo">Gurreiro do Warzone Brasil</div>
+        <div class="menu-icon">
+            <img src="assets/logo.png" alt="Menu" id="grenade-menu">
+        </div>
+    </header>
+
+    <!-- Seção Parallax Hero -->
+    <section class="hero-parallax">
+        <!-- Camada de Fundo -->
+        <div class="parallax-layer parallax-bg" id="layer-bg"></div>
+        <!-- Camada do Meio (Fumaça) -->
+        <div class="parallax-layer parallax-smoke" id="layer-smoke"></div>
+        <!-- Camada Frontal (Conteúdo) -->
+        <div class="parallax-layer parallax-front">
+            <div class="hero-content fade-in">
+                <h1 class="glitch" data-text="GDWBR">GDWBR</h1>
+                <h2>DOMINE O CAMPO DE BATALHA</h2>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn primary">SAIBA MAIS</a>
+                    <a href="jogadores.html" class="btn secondary">CONHECER JOGADORES</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção About The Clã -->
+    <section id="about" class="about-section">
+        <div class="container fade-in">
+            <h2 class="section-title">Sobre o GDWBR</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Nascido nas trincheiras e forjado no fogo do combate urbano. Nosso clã é focado em estratégia, comunicação e vitória absoluta. Junte-se aos melhores operadores e participe de missões de alto risco.</p>
+                    <a href="https://www.instagram.com/gdwb.r" target="_blank" class="btn outline">REDE SOCIAL</a>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="assets/operator.png" alt="Operator">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seções de Modos -->
+    <section id="modes" class="modes-section">
+        <div class="container">
+            <h2 class="section-title">MODOS QUE JOGAMOS</h2>
+            <div class="modes-grid">
+                <div class="mode-card fade-in">
+                    <div class="card-icon">🎯</div>
+                    <h3>MODO CAMPANHA</h3>
+                    <p>Mergulhe em narrativas profundas e missões táticas ao redor do mundo. A história do nosso clã é escrita a cada vitória.</p>
+                </div>
+                <div class="mode-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="card-icon">⚔️</div>
+                    <h3>MULTIPLAYER</h3>
+                    <p>Combate em ritmo acelerado. Domine os mapas, controle os objetivos e prove sua superioridade no modo competitivo.</p>
+                </div>
+                <div class="mode-card fade-in" style="transition-delay: 0.4s;">
+                    <div class="card-icon">🎖️</div>
+                    <h3>OPERADORES</h3>
+                    <p>Especialistas letais com habilidades únicas. Conheça nossos melhores soldados e descubra quem lidera a linha de frente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">CALL OF DUTY</div>
+                <div class="footer-links" id="social">
+                    <a href="#">Twitter</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Twitch</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 COD Clã. Todos os direitos reservados. Operação autorizada.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
