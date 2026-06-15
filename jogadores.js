@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const playerData = {
         'price': {
-            name: 'CAPITÃO PRICE',
-            role: 'Líder de Esquadrão 🇬🇧',
-            bio: 'John Price é um atirador de elite experiente e líder da Força-Tarefa 141. Especialista em operações sob pressão extrema e ambientes hostis.',
+            name: 'Maik_Mahatuz',
+            role: 'Rushador e morre',
+            bio: 'Maik é um atirador de elite e joga com sniper. Especialista em operações sob pressão extrema e ambientes hostis.',
             skills: ['Liderança Tática', 'Mestre em Furtividade', 'Especialista em CQB'],
-            weapons: 'M4A1 Custom, Desert Eagle',
-            missions: 'Operação Kingfish, Fim de Jogo'
+            weapons: 'K-98, HDR',
+            missions: 'Solo vs Squad'
         },
         'ghost': {
             name: 'GHOST',
